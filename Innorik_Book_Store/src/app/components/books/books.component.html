@@ -1,0 +1,9 @@
+<h2>{{books.bookName | uppercase}} Details</h2>
+<div>
+    <label for="name">Book name: </label>
+    <input id="name" [(ngModel)]="books.bookName" placeholder="name">
+</div>
+<div><span>id: </span> {{books.id}}</div>
+<div><span>category: </span> {{books.category}}</div>
+<div><span>price: </span> {{books.price}}</div>
+<div><span>description: </span> {{books.description}}</div>
