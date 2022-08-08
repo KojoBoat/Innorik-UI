@@ -27,6 +27,8 @@ export class EditBookComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.activatedRoute.params.subscribe((params: Params) => {
       this.bookId = params['id'];
+      console.log("Book Id", this.bookId);
+      
       this.bookName = params['bookName'];
       this.initForm();
     });
@@ -34,7 +36,7 @@ export class EditBookComponent implements OnInit {
 
   private initForm() {
     this.bookForm = new FormGroup({
-      id: new FormControl({value:'', disabled:true}),
+      id: new FormControl({value:this.bookId, disabled:true}),
       name: new FormControl('', Validators.required),
       category: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
@@ -58,7 +60,7 @@ export class EditBookComponent implements OnInit {
       bookName: this.bookForm.value.name,
       category: this.bookForm.value.category,
       description: this.bookForm.value.description,
-      price: this.bookForm.value.price
+      price: +this.bookForm.value.price
     }
 
     this.bookService.updateUserBook(bookUpdate);

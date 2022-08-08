@@ -34,11 +34,10 @@ export class AddBookComponent implements OnInit {
 
   onSubmit() {
     const newBook: Book = {
-      id: this.bookForm.value.id,
       bookName: this.bookForm.value.name,
       category: this.bookForm.value.category,
       description: this.bookForm.value.description,
-      price: this.bookForm.value.price
+      price: +this.bookForm.value.price
     }
 
     this.bookService.addBook(newBook).subscribe((data) => {

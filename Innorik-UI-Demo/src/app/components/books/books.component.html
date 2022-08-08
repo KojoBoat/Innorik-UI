@@ -1,9 +1,9 @@
 <button class="btn btn-primary" [routerLink]="['add']">Add Book</button>
 <br>
-<div style="float: right">
-    <input type="text" placeholder="search book..">
+<form style="float: right" [formGroup]="bookName">
+    <input type="text" placeholder="search book.." formControlName="name">
     <button (click)="onSearch()" class="btn btn-primary">search</button>
-</div>
+</form>
 <table class="table align-middle mb-0 bg-white">
     <thead class="bg-light">
       <tr>
@@ -43,10 +43,10 @@
             </div>
         </td>
         <td>
-            <button type="button" class="btn btn-danger" [routerLink]="['edit', bookName]">
+            <button type="button" class="btn btn-danger" [routerLink]="['edit', book.id]">
                 Edit
             </button>
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success" (click)="onDelete(book.id)">
                 Delete
               </button>
         </td>

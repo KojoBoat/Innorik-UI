@@ -1,5 +1,5 @@
 export interface Book {
-    id: number;
+    id?: number;
     bookName: string;
     category: string;
     price: number;

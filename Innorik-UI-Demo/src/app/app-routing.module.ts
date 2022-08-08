@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'books',
     children : [
       {path: 'add', component: AddBookComponent},
-      {path: 'edit/:bookName', component: EditBookComponent}
+      {path: 'edit/:id', component: EditBookComponent}
     ]
   }
 ];
