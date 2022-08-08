@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Innorik_Book_Store'`, () => {
+  it(`should have as title 'Innorik-UI-Demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Innorik_Book_Store');
+    expect(app.title).toEqual('Innorik-UI-Demo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Innorik_Book_Store app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Innorik-UI-Demo app is running!');
   });
 });

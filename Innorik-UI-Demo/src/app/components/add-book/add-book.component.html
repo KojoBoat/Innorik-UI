@@ -1,0 +1,47 @@
+<div class="container editBook"><br><br>
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8">
+            <h1 class="title">Add new book</h1>
+    <form [formGroup]="bookForm" class="box"><br>
+        <div>
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="id">Book Name</label><br>
+                    <input type="text" class="form-control" formControlName="name" id="name"><br>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="category">Category</label><br>
+                    <input type="text" id="category" class="form-control" FormControl="category"><br>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-12">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="description">Description</label><br>
+                        <input type="text" id="description" class="form-control" FormControl="description"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" class="form-control" FormControl="price"><br>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <button class="btn btn-success" type="submit" (click)="onSubmit()">Save</button>
+            <button class="btn btn-danger" (click)="onCancel()" type="button">Cancel</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>

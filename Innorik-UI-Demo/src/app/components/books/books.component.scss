@@ -1,0 +1,31 @@
+.hr {
+    color: #434850;
+    border: 1px solid;
+}
+
+.titles {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+}
+
+.book-name-title {
+    width: 30%;
+}
+
+.book-description {
+    width: 30%;
+}
+
+.book-price {
+    width: 30%;
+}
+
+.book-category {
+    width: 30%;
+}

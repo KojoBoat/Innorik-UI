@@ -1,0 +1,55 @@
+<button class="btn btn-primary" [routerLink]="['add']">Add Book</button>
+<br>
+<div style="float: right">
+    <input type="text" placeholder="search book..">
+    <button (click)="onSearch()" class="btn btn-primary">search</button>
+</div>
+<table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let book of books">
+        <td >
+            <div class="ms-3">
+                {{book.id}}
+            </div>
+        </td>
+        <td >
+            <div class="ms-3">
+                {{book.bookName}}
+            </div>
+        </td>
+        <td>
+            <div class="ms-3" >
+                {{book.category}}
+            </div>
+        </td>
+        <td>
+            <div class="ms-3" >
+                {{book.description}}
+            </div>
+        </td>
+        <td>
+            <div class="ms-3" >
+                {{book.price}}
+            </div>
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger" [routerLink]="['edit', bookName]">
+                Edit
+            </button>
+            <button type="button" class="btn btn-success">
+                Delete
+              </button>
+        </td>
+     </tr>
+    </tbody>
+  </table>
